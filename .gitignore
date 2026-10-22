@@ -1,0 +1,12 @@
+node_modules
+dist
+.vercel
+.DS_Store
+.opencode
+opencode.json
+beatriz_photos_ref
+# Segredos: nunca versionar
+.env
+.env.*
+*.pem
+*.key

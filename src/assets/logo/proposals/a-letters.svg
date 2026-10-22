@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-labelledby="t"><title id="t">Logo BF - Beatriz Fernandes</title>
+<defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E3CFA6"/><stop offset=".5" stop-color="#B89B72"/><stop offset="1" stop-color="#8C7250"/></linearGradient>
+<linearGradient id="mer" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8E3548"/><stop offset="1" stop-color="#6A2535"/></linearGradient>
+</defs>
+<!-- B (merlot): contraste de traço, bojos grossos e fios finos -->
+<path fill="url(#mer)" d="M70 20H78C102 20 106 62 80 65.5C118 62 120 120 80 120H42V116H80C108 116 108 69 80 69.5L64 69.5V65.5H80C96 62 92 24 78 24H70Z"/>
+<!-- F (dourado): haste grossa, braços finos com serifas -->
+<g fill="url(#gold)">
+<path d="M30 20H42V120H30Z"/>
+<path d="M19 16.5H53Q47 18 47 20V120Q47 122 53 123.5H19Q25 122 25 120V20Q25 18 19 16.5Z"/>
+<path d="M42 20H72V24H42Z"/>
+<path d="M42 65.5H64V69.5H42Z"/>
+</g>
+<path d="M36 26V114" stroke="#2A2A2C" stroke-width="1" opacity=".55"/>
+</svg>

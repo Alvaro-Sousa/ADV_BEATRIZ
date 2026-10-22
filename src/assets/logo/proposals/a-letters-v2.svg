@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 4 144 134" role="img" aria-labelledby="t"><title id="t">Logo BF - Beatriz Fernandes</title>
+<defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E3CFA6"/><stop offset=".5" stop-color="#B89B72"/><stop offset="1" stop-color="#8C7250"/></linearGradient>
+<linearGradient id="mer" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8E3548"/><stop offset="1" stop-color="#6A2535"/></linearGradient>
+</defs>
+<!-- B (merlot): bojos com contraste, linhas mais grossas e floreios -->
+<g fill="url(#mer)">
+<path d="M70 20H78C104 20 108 60 82 64C122 62 124 120 80 120H42V113H80C106 113 106 71 80 71H64V64H80C93 62 91 27 78 27H70Z"/>
+<!-- floreio inferior: cauda caligrafica sob o bojo -->
+<path d="M42 120C98 121 128 112 141 90C138 114 112 130 42 120Z"/>
+<!-- esporao em folha na cintura -->
+<path d="M82 63C98 67 108 62 116 50C113 70 98 73 82 68Z"/>
+</g>
+<!-- F (dourado) -->
+<g fill="url(#gold)">
+<path d="M28 20H42V120H28Z"/>
+<path d="M17 16.5H53Q47 18 47 20V120Q47 122 53 123.5H17Q23 122 23 120V20Q23 18 17 16.5Z"/>
+<path d="M42 20H72V27H42Z"/>
+<path d="M42 64H64V71H42Z"/>
+</g>
+<path d="M35 26V114" stroke="#2A2A2C" stroke-width="1" opacity=".55"/>
+</svg>

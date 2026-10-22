@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t"><title id="t">Logo BF - Beatriz Fernandes</title>
+<circle cx="60" cy="60" r="58" fill="#2A2A2C"/>
+<circle cx="60" cy="60" r="53" fill="none" stroke="#B89B72" stroke-width="1.2"/>
+<g fill="none" stroke-width="5" stroke-linejoin="miter">
+<path d="M40 29V92" stroke="#B89B72"/>
+<path d="M40 31.5H62C80 31.5 80 59 62 59H40M40 59H66C86 59 86 89.5 66 89.5H40" stroke="#F5F0EB"/>
+<path d="M40 31.5H90M40 59H80" stroke="#B89B72"/>
+</g></svg>

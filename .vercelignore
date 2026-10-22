@@ -1,0 +1,13 @@
+# Nada disto deve ir para o deploy
+.env
+.env.*
+*.pem
+*.key
+.git
+.gitignore
+.opencode
+opencode.json
+beatriz_photos_ref
+src/assets/logo/proposals
+scripts
+*.md
