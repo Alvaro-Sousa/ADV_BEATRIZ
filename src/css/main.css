@@ -222,9 +222,12 @@ button { font: inherit; color: inherit; }
 .footer { background: #131214; border-top: 1px solid rgba(184, 155, 114, .35); padding-top: 3.5rem; }
 .footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 2rem; padding-bottom: 2.5rem; }
 .footer__text { color: var(--text-dim); font-size: .88rem; margin-top: 1rem; }
-.footer__links { display: grid; align-content: start; gap: .6rem; }
-.footer__links a { color: var(--text-dim); text-decoration: none; font-size: .9rem; transition: color .3s; }
-.footer__links a:hover { color: var(--gold-light); }
+.footer__links { display: grid; align-content: start; gap: .65rem; }
+.footer__title { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-bottom: .25rem; font-weight: 600; }
+.footer__links a { display: inline-flex; align-items: center; gap: .55rem; color: var(--text-dim); text-decoration: none; font-size: .9rem; transition: color .3s, transform .2s var(--ease); }
+.footer__links a:hover { color: var(--gold-light); transform: translateX(2px); }
+.footer__links a svg { flex-shrink: 0; width: 18px; height: 18px; color: var(--gold); transition: color .3s, transform .2s var(--ease); }
+.footer__links a:hover svg { color: var(--gold-light); transform: scale(1.12); }
 .footer__legal { border-top: 1px solid rgba(255, 255, 255, .08); padding: 1.5rem 0 5rem; font-size: .75rem; color: #8d857c; }
 .footer__legal p { max-width: 900px; margin-bottom: .5rem; }
 
