@@ -51,7 +51,7 @@ export function initMap() {
     if (slot.querySelector('iframe')) return;
     const iframe = document.createElement('iframe');
     iframe.src = src;
-    iframe.title = 'Localização do escritório em Patos/PB';
+    iframe.title = 'Localização do escritório: Dias, Soares e Figueirêdo Advogados em Patos/PB';
     iframe.loading = 'lazy';
     iframe.referrerPolicy = 'no-referrer-when-downgrade';
     iframe.setAttribute('allowfullscreen', '');
