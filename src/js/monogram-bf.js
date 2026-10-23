@@ -1,0 +1,83 @@
+// Animação salva: Marca-d'água Monogramática BF (camada única nítida com glow pulsante)
+// Centralizada perfeitamente em telas mobile e com leve paralaxe em telas maiores.
+
+const BF_SVG_PATH =
+  'M656.0 10.1Q655.0 9.9 648.0 12.5Q641.0 15.2 629.5 17.8Q618.0 20.4 596.5 22.9Q575.0 25.5 362.4 27.0L362.4 27.0L362.4 31.0L368.7 32.4Q375.0 33.8 379.5 36.7Q384.0 39.5 386.1 42.8Q388.2 46.0 389.8 51.5Q391.4 57.0 393.0 267.0L393.0 267.0L394.1 267.0Q395.2 267.0 415.8 253.0Q436.4 239.0 437.4 36.0L437.4 36.0L525.2 35.8Q613.0 35.6 620.5 36.7Q628.0 37.8 634.0 40.0Q640.0 42.3 644.0 45.4Q648.0 48.5 650.8 53.3Q653.6 58.0 656.0 58.9L656.0 58.9L656.7 57.5Q657.5 56.0 657.5 34.5Q657.5 13.0 657.0 10.4L657.0 10.4L656.0 10.1ZM208.5 30.2Q196.0 29.8 135.0 30.2Q74.0 30.5 70.7 32.0L70.7 32.0L72.0 35.1L79.0 35.9Q86.0 36.8 90.0 39.2Q94.0 41.6 96.6 45.8Q99.2 50.0 100.3 55.0Q101.4 60.0 101.0 385.2L101.0 385.2L123.0 385.4Q145.0 385.5 146.2 384.2Q147.5 383.0 147.0 212.5Q146.5 42.0 148.0 37.9L148.0 37.9L173.5 37.7Q199.0 37.5 208.0 38.6Q217.0 39.6 225.0 41.7Q233.0 43.8 240.5 47.3Q248.0 50.8 253.2 54.4Q258.5 58.0 265.7 65.9Q273.0 73.7 278.1 82.9Q283.2 92.0 285.7 100.0Q288.2 108.0 289.3 115.5Q290.5 123.0 290.0 137.0Q289.4 151.0 286.3 162.5Q283.2 174.0 279.2 182.0Q275.2 190.0 269.3 198.0Q263.5 206.0 256.9 212.0Q250.3 218.0 244.1 221.9Q238.0 225.7 231.8 228.4Q225.6 231.0 224.5 234.0L224.5 234.0L240.2 235.9Q256.0 237.8 264.0 239.8Q272.0 241.8 286.0 247.0Q300.0 252.3 313.6 260.1Q327.3 268.0 358.0 294.6L358.0 294.6L381.6 276.0L376.9 272.0Q372.3 268.0 362.6 261.9Q353.0 255.8 340.0 249.8Q327.0 243.8 311.5 239.2Q296.0 234.6 254.4 229.0L254.4 229.0L267.2 222.9Q280.0 216.7 288.6 211.4Q297.3 206.0 306.9 197.5Q316.5 189.0 320.3 184.0Q324.2 179.0 329.2 169.0Q334.2 159.0 336.3 150.0Q338.4 141.0 338.4 129.5Q338.4 118.0 336.8 111.0Q335.2 104.0 331.5 95.5Q327.7 87.0 324.1 81.5Q320.4 76.0 313.2 68.8Q306.0 61.6 296.5 55.4Q287.0 49.3 277.5 45.0Q268.0 40.8 257.0 37.7Q246.0 34.6 233.5 32.6Q221.0 30.6 208.5 30.2ZM570.0 206.7Q554.0 206.8 541.5 208.7Q529.0 210.6 514.5 214.7Q500.0 218.8 488.0 223.8Q476.0 228.7 455.0 240.3Q434.0 251.8 408.0 270.2Q382.0 288.6 331.0 333.0Q280.0 377.4 260.6 392.7Q241.3 408.0 222.1 419.9Q203.0 431.7 190.0 437.5Q177.0 443.2 160.0 447.3Q143.0 451.5 130.0 451.4Q117.0 451.4 108.5 449.8Q100.0 448.2 88.5 444.2Q77.0 440.2 69.5 436.5Q62.0 432.7 46.4 422.4Q30.7 412.0 21.4 403.3Q12.0 394.6 9.9 395.0L9.9 395.0L10.4 397.0Q10.8 399.0 14.3 407.5Q17.7 416.0 24.8 429.0Q31.8 442.0 39.2 452.0Q46.6 462.0 53.0 468.5Q59.5 475.0 75.8 486.4Q92.0 497.7 102.0 502.5Q112.0 507.2 125.0 511.7Q138.0 516.2 155.0 519.8Q172.0 523.4 187.0 524.9Q202.0 526.5 222.0 525.9Q242.0 525.4 258.5 522.9Q275.0 520.4 293.0 515.3Q311.0 510.2 327.0 503.2Q343.0 496.3 354.6 489.1Q366.3 482.0 391.0 460.9L391.0 460.9L391.7 462.0Q392.5 463.0 392.5 472.5Q392.5 482.0 390.4 490.5Q388.3 499.0 384.8 503.5Q381.3 508.0 378.6 509.6Q376.0 511.2 363.0 514.6L363.0 514.6L362.4 518.0L469.0 518.3L470.3 516.0L469.6 515.3Q469.0 514.6 463.3 513.3Q457.6 512.0 452.1 508.5Q446.6 505.0 443.7 500.0Q440.8 495.0 439.2 488.5Q437.6 482.0 437.0 384.5Q436.5 287.0 435.0 283.9L435.0 283.9L380.1 327.0L383.7 344.0Q387.4 361.0 387.4 374.0Q387.4 387.0 383.8 403.0Q380.2 419.0 374.7 430.0Q369.2 441.0 364.1 447.7Q359.0 454.5 349.1 463.7Q339.3 473.0 326.1 481.1Q313.0 489.3 298.5 495.2Q284.0 501.2 270.0 504.8Q256.0 508.4 240.5 510.5Q225.0 512.5 205.0 512.0Q185.0 511.4 174.0 509.9Q163.0 508.4 147.5 504.8Q132.0 501.2 111.8 493.1Q91.5 485.0 76.2 474.7Q61.0 464.4 49.3 452.2Q37.6 440.0 21.9 415.0L21.9 415.0L30.9 423.2Q40.0 431.4 51.5 439.3Q63.0 447.2 73.0 452.2Q83.0 457.2 94.0 460.7Q105.0 464.2 118.5 465.8Q132.0 467.5 141.0 466.9Q150.0 466.4 162.5 463.8Q175.0 461.2 184.0 458.2Q193.0 455.2 209.5 447.2Q226.0 439.2 242.1 428.6Q258.3 418.0 278.1 402.2Q298.0 386.4 344.0 347.0Q390.0 307.6 409.0 293.2Q428.0 278.8 450.0 265.3Q472.0 251.7 489.0 243.8Q506.0 235.8 518.0 231.8Q530.0 227.8 541.5 225.2Q553.0 222.6 571.5 221.1Q590.0 219.5 648.0 226.3L648.0 226.3L647.5 225.1Q647.0 223.9 642.0 221.3Q637.0 218.8 622.5 214.2Q608.0 209.6 597.0 208.1Q586.0 206.5 570.0 206.7ZM566.0 235.7L566.0 235.7L565.0 238.1L569.5 243.3Q574.0 248.5 583.0 254.9Q592.0 261.3 604.0 265.7Q616.0 270.2 628.0 271.8Q640.0 273.5 651.5 272.5Q663.0 271.4 676.0 267.1Q689.0 262.7 697.5 257.1Q706.0 251.4 718.2 237.0L718.2 237.0L716.6 236.2Q715.0 235.5 566.0 235.7ZM54.0 395.7L54.0 395.7L53.0 398.1L56.3 402.1Q59.5 406.0 69.8 413.4Q80.0 420.7 88.0 424.0Q96.0 427.2 108.0 429.3Q120.0 431.5 130.5 431.0Q141.0 430.4 151.0 427.6Q161.0 424.7 167.5 421.5Q174.0 418.2 180.0 413.8Q186.0 409.4 196.2 397.0L196.2 397.0L194.6 396.2Q193.0 395.5 54.0 395.7Z';
+
+export function createMonogramBF(getWidth, getHeight) {
+  const bfPath = typeof Path2D !== 'undefined' ? new Path2D(BF_SVG_PATH) : null;
+
+  // Centro geométrico exato do path (bbox X: 9.9..718.2, Y: 10.1..526.5)
+  const PATH_CX = 364.05;
+  const PATH_CY = 268.3;
+  const PATH_W = 708.3;
+
+  const render = (ctx, time, parX, parY) => {
+    if (!bfPath) return;
+
+    const width = getWidth();
+    const height = getHeight();
+    const isMobile = width <= 960;
+
+    // No mobile fica perfeitamente centralizada no meio da tela;
+    // no desktop também fica centralizada com leve paralaxe de profundidade.
+    const centerX = width * 0.5 + (isMobile ? parX * 0.15 : parX * 0.65);
+    const centerY = height * 0.5 + (isMobile ? 0 : parY * 0.35);
+
+    const targetWidth = isMobile
+      ? Math.min(width * 0.86, height * 0.68)
+      : Math.min(width * 0.56, height * 0.78);
+    const breathe = 1 + Math.sin(time * 0.35) * 0.01;
+    const scale = (targetWidth / PATH_W) * breathe;
+
+    // Pulso de glow sereno (0 a 1)
+    const glowPulse = 0.5 + 0.5 * Math.sin(time * 0.65);
+
+    // 1. Halo radial suave de glow ao redor da marca-d'água
+    const haloRadius = targetWidth * (0.68 + glowPulse * 0.08);
+    const halo = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, haloRadius);
+    const haloPeak = (0.075 + glowPulse * 0.055).toFixed(3);
+    halo.addColorStop(0, `rgba(245, 239, 232, ${haloPeak})`);
+    halo.addColorStop(0.5, `rgba(245, 239, 232, ${(0.03 + glowPulse * 0.025).toFixed(3)})`);
+    halo.addColorStop(1, 'rgba(245, 239, 232, 0)');
+    ctx.fillStyle = halo;
+    ctx.fillRect(0, 0, width, height);
+
+    // 2. Única marca-d'água BF nítida com glow suave e varredura luminosa
+    ctx.save();
+    ctx.translate(centerX - PATH_CX * scale, centerY - PATH_CY * scale);
+    ctx.scale(scale, scale);
+
+    // Varredura lenta de luz sobre o monograma
+    const sweepPos = ((Math.sin(time * 0.32) + 1) * 0.5) * 860 - 70;
+
+    const baseFill = 0.055 + glowPulse * 0.03;
+    const peakFill = 0.13 + glowPulse * 0.055;
+    const fillGrad = ctx.createLinearGradient(sweepPos - 260, 0, sweepPos + 260, 520);
+    fillGrad.addColorStop(0, `rgba(245, 239, 232, ${baseFill.toFixed(3)})`);
+    fillGrad.addColorStop(0.5, `rgba(245, 239, 232, ${peakFill.toFixed(3)})`);
+    fillGrad.addColorStop(1, `rgba(245, 239, 232, ${baseFill.toFixed(3)})`);
+
+    // Glow luminoso integrado ao traço e preenchimento
+    ctx.shadowColor = `rgba(245, 239, 232, ${(0.28 + glowPulse * 0.24).toFixed(3)})`;
+    ctx.shadowBlur = 14 + glowPulse * 18;
+
+    ctx.fillStyle = fillGrad;
+    ctx.fill(bfPath, 'evenodd');
+
+    const baseStroke = 0.16 + glowPulse * 0.06;
+    const peakStroke = 0.34 + glowPulse * 0.1;
+    const strokeGrad = ctx.createLinearGradient(sweepPos - 220, 0, sweepPos + 220, 520);
+    strokeGrad.addColorStop(0, `rgba(245, 239, 232, ${baseStroke.toFixed(3)})`);
+    strokeGrad.addColorStop(0.5, `rgba(245, 239, 232, ${peakStroke.toFixed(3)})`);
+    strokeGrad.addColorStop(1, `rgba(245, 239, 232, ${baseStroke.toFixed(3)})`);
+
+    ctx.strokeStyle = strokeGrad;
+    ctx.lineWidth = 1.65 / scale;
+    ctx.stroke(bfPath);
+
+    ctx.restore();
+  };
+
+  return { render };
+}

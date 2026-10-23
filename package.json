@@ -10,9 +10,6 @@
     "check": "node scripts/check-security.mjs",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "three": "0.170.0"
-  },
   "devDependencies": {
     "vite": "6.4.5"
   }

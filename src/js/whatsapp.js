@@ -14,15 +14,15 @@ const AREAS = {
       'Outra situação trabalhista',
     ],
   },
-  maternidade: {
-    label: 'Salário-Maternidade',
+  previdenciario: {
+    label: 'Direito Previdenciário',
     situacoes: [
-      'Autônoma, MEI ou segurada facultativa',
-      'Benefício negado pelo INSS',
-      'Desempregada (período de graça)',
-      'Adoção ou guarda judicial',
-      'Dúvida sobre documentos e prazos',
-      'Outra situação de salário-maternidade',
+      'Aposentadoria (idade, tempo de contribuição, especial ou rural)',
+      'Benefício por incapacidade (auxílio-doença ou invalidez)',
+      'BPC/LOAS (idoso ou pessoa com deficiência)',
+      'Pensão por morte ou salário-maternidade',
+      'Benefício negado, cortado ou em atraso no INSS',
+      'Outra situação previdenciária',
     ],
   },
   civil: {
