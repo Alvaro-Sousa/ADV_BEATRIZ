@@ -1,3 +1,22 @@
+export function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+  let closed = false;
+  const close = () => {
+    if (closed) return;
+    closed = true;
+    preloader.classList.add('is-done');
+    setTimeout(() => preloader.remove(), 750);
+  };
+  const minDelay = new Promise((r) => setTimeout(r, 950));
+  const pageLoad = new Promise((r) => {
+    if (document.readyState === 'complete') r();
+    else window.addEventListener('load', r, { once: true });
+  });
+  Promise.all([minDelay, pageLoad]).then(close);
+  setTimeout(close, 2200);
+}
+
 export function initHeader() {
   const header = document.querySelector('.header');
   if (!header) return;

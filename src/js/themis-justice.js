@@ -3,7 +3,7 @@
 // - Halo clássico e feixes suaves de luz volumétrica atrás da cabeça e da balança
 // - Varredura de iluminação chiaroscuro em tempo real sobre os traços da gravura
 // - Brilho harmônico alternado nos dois pratos da balança e reflexo na espada
-// - Centralização automática no mobile e paralaxe suave no desktop
+// - No mobile: posiciona a face de Têmis acima do botão de CTA para nunca ser coberta
 
 export function createThemisJustice(getWidth, getHeight) {
   const img = new Image();
@@ -13,13 +13,13 @@ export function createThemisJustice(getWidth, getHeight) {
   };
   img.src = '/img/themis.webp';
 
-  // Canvas auxiliar para aplicar iluminação dinâmica (source-atop) apenas sobre os traços da estátua
   const buffer = document.createElement('canvas');
   const bctx = buffer.getContext('2d');
 
   // Coordenadas normalizadas (0..1) dos pontos nobres dentro de /img/themis.webp (620x726)
   const LANDMARKS = {
     head: { u: 0.455, v: 0.165 },
+    chin: { u: 0.455, v: 0.242 },
     pivot: { u: 0.72, v: 0.235 },
     leftPan: { u: 0.615, v: 0.472 },
     rightPan: { u: 0.825, v: 0.472 },
@@ -32,15 +32,29 @@ export function createThemisJustice(getWidth, getHeight) {
     const height = getHeight();
     const isMobile = width <= 960;
 
-    // Centralizada no meio das telas mobile; posição monumental equilibrada no desktop
-    const centerX = width * (isMobile ? 0.5 : 0.46) + (isMobile ? parX * 0.18 : parX * 0.65);
-    const centerY = height * (isMobile ? 0.52 : 0.54) + (isMobile ? 0 : parY * 0.35);
-
     const breathe = 1 + Math.sin(time * 0.38) * 0.012;
-    const drawH = (isMobile ? Math.min(height * 0.86, width * 1.18) : height * 0.94) * breathe;
+    const drawH = (isMobile ? Math.min(height * 0.76, width * 1.15) : height * 0.94) * breathe;
     const drawW = drawH * (620 / 726);
+
+    // No mobile, desloca levemente para a direita e posiciona a face acima do botão .hero__cta
+    const centerX = width * (isMobile ? 0.55 : 0.46) + (isMobile ? parX * 0.15 : parX * 0.65);
     const x0 = centerX - drawW * 0.5;
-    const y0 = centerY - drawH * 0.5;
+
+    let y0 = height * 0.54 - drawH * 0.5 + parY * 0.35;
+    if (isMobile) {
+      const heroEl = document.querySelector('.hero');
+      const ctaEl = document.querySelector('.hero__cta');
+      if (heroEl && ctaEl) {
+        const heroRect = heroEl.getBoundingClientRect();
+        const ctaRect = ctaEl.getBoundingClientRect();
+        const ctaTop = ctaRect.top - heroRect.top;
+        // Garante que o queixo (v = 0.242) fique pelo menos 18px acima do botão "Falar com a advogada"
+        const desiredY0 = ctaTop - 18 - drawH * LANDMARKS.chin.v;
+        y0 = Math.max(68, desiredY0);
+      } else {
+        y0 = 76;
+      }
+    }
 
     const headX = x0 + drawW * LANDMARKS.head.u;
     const headY = y0 + drawH * LANDMARKS.head.v;
@@ -72,7 +86,6 @@ export function createThemisJustice(getWidth, getHeight) {
     ctx.fillStyle = ambientHalo;
     ctx.fillRect(0, 0, width, height);
 
-    // Feixes cônicos sutis de glória/luz clássica girando muito lentamente
     const rayCount = 8;
     ctx.translate(rayOriginX, rayOriginY);
     for (let i = 0; i < rayCount; i++) {
@@ -94,7 +107,7 @@ export function createThemisJustice(getWidth, getHeight) {
     }
     ctx.restore();
 
-    // 2. Auréola clássica sutil atrás da cabeça e do fiel da balança
+    // 2. Auréola clássica sutil atrás da cabeça
     ctx.save();
     const aureoleR = drawW * 0.22;
     const aurGrad = ctx.createRadialGradient(
@@ -106,7 +119,7 @@ export function createThemisJustice(getWidth, getHeight) {
       aureoleR * 1.15
     );
     aurGrad.addColorStop(0, 'rgba(245, 239, 232, 0)');
-    aurGrad.addColorStop(0.5, `rgba(245, 239, 232, ${(0.09 + haloPulse * 0.05).toFixed(3)})`);
+    aurGrad.addColorStop(0.5, `rgba(245, 239, 232, ${(0.1 + haloPulse * 0.05).toFixed(3)})`);
     aurGrad.addColorStop(1, 'rgba(245, 239, 232, 0)');
     ctx.fillStyle = aurGrad;
     ctx.beginPath();
@@ -114,7 +127,7 @@ export function createThemisJustice(getWidth, getHeight) {
     ctx.fill();
     ctx.restore();
 
-    // 3. Renderização da escultura de Têmis com iluminação chiaroscuro viva
+    // 3. Renderização da escultura de Têmis com iluminação chiaroscuro viva (foco extra na face)
     if (loaded && bctx) {
       const bw = Math.max(1, Math.round(drawW));
       const bh = Math.max(1, Math.round(drawH));
@@ -127,32 +140,30 @@ export function createThemisJustice(getWidth, getHeight) {
       bctx.globalCompositeOperation = 'source-over';
       bctx.drawImage(img, 0, 0, bw, bh);
 
-      // Máscara de iluminação móvel: destaca diferentes partes da gravura ao longo do tempo
       bctx.globalCompositeOperation = 'source-in';
 
-      const sweepX = bw * (0.5 + 0.42 * Math.sin(time * 0.35));
-      const sweepY = bh * (0.42 + 0.28 * Math.cos(time * 0.27));
+      const sweepX = bw * (0.5 + 0.36 * Math.sin(time * 0.35));
+      const sweepY = bh * (0.28 + 0.22 * Math.cos(time * 0.27));
       const lightGrad = bctx.createRadialGradient(
         sweepX,
         sweepY,
         bw * 0.04,
         bw * 0.5,
-        bh * 0.48,
+        bh * 0.42,
         Math.max(bw, bh) * 0.78
       );
-      const peakA = (0.46 + haloPulse * 0.12).toFixed(3);
-      const midA = (0.25 + haloPulse * 0.06).toFixed(3);
-      const lowA = '0.13';
+      const peakA = (0.52 + haloPulse * 0.12).toFixed(3);
+      const midA = (0.28 + haloPulse * 0.06).toFixed(3);
       lightGrad.addColorStop(0, `rgba(245, 239, 232, ${peakA})`);
       lightGrad.addColorStop(0.45, `rgba(245, 239, 232, ${midA})`);
-      lightGrad.addColorStop(0.85, `rgba(245, 239, 232, ${lowA})`);
+      lightGrad.addColorStop(0.85, 'rgba(245, 239, 232, 0.14)');
       lightGrad.addColorStop(1, 'rgba(245, 239, 232, 0.04)');
 
       bctx.fillStyle = lightGrad;
       bctx.fillRect(0, 0, bw, bh);
 
       ctx.save();
-      ctx.shadowColor = `rgba(245, 239, 232, ${(0.22 + haloPulse * 0.16).toFixed(3)})`;
+      ctx.shadowColor = `rgba(245, 239, 232, ${(0.24 + haloPulse * 0.16).toFixed(3)})`;
       ctx.shadowBlur = 18 + haloPulse * 14;
       ctx.drawImage(buffer, x0, y0, drawW, drawH);
       ctx.restore();

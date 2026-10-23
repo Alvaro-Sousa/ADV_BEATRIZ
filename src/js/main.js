@@ -1,10 +1,11 @@
 import { initAccordions } from './accordion.js';
 import { initWhatsApp } from './whatsapp.js';
-import { initReveal, initHeader, initMenu, initMap } from './ui.js';
+import { initPreloader, initReveal, initHeader, initMenu, initMap } from './ui.js';
 import { initScene } from './scene.js';
 
 document.documentElement.classList.add('js');
 
+initPreloader();
 initHeader();
 initMenu();
 initReveal();
