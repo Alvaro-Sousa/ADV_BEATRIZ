@@ -16,15 +16,15 @@ export function createThemisJustice(getWidth, getHeight) {
   const buffer = document.createElement('canvas');
   const bctx = buffer.getContext('2d');
 
-  // Coordenadas normalizadas (0..1) dos pontos nobres dentro de /img/themis.webp (620x726)
+  // Coordenadas normalizadas (0..1) dos pontos nobres dentro de /img/themis.webp (640x1080)
   const LANDMARKS = {
-    head: { u: 0.455, v: 0.165 },
-    chin: { u: 0.455, v: 0.242 },
-    pivot: { u: 0.72, v: 0.235 },
-    leftPan: { u: 0.615, v: 0.472 },
-    rightPan: { u: 0.825, v: 0.472 },
-    swordTop: { u: 0.188, v: 0.685 },
-    swordBot: { u: 0.222, v: 0.965 },
+    head: { u: 0.552, v: 0.228 },
+    chin: { u: 0.552, v: 0.285 },
+    pivot: { u: 0.295, v: 0.168 },
+    leftPan: { u: 0.145, v: 0.408 },
+    rightPan: { u: 0.382, v: 0.352 },
+    swordTop: { u: 0.815, v: 0.785 },
+    swordBot: { u: 0.695, v: 0.965 },
   };
 
   const render = (ctx, time, parX, parY) => {
@@ -37,15 +37,16 @@ export function createThemisJustice(getWidth, getHeight) {
     const autoFloatX = isMobile ? Math.cos(time * 0.55) * 4.5 : 0;
     const autoFloatY = isMobile ? Math.sin(time * 0.75) * 6.5 : 0;
 
-    const drawH = (isMobile ? Math.min(height * 0.76, width * 1.15) : height * 0.94) * breathe;
-    const drawW = drawH * (620 / 726);
+    const aspect = loaded && img.naturalHeight ? img.naturalWidth / img.naturalHeight : 640 / 1080;
+    const drawH = (isMobile ? Math.min(height * 0.82, width * 1.48) : height * 0.96) * breathe;
+    const drawW = drawH * aspect;
 
     const centerX =
-      width * (isMobile ? 0.55 : 0.46) +
+      width * (isMobile ? 0.52 : 0.47) +
       (isMobile ? parX * 0.15 + autoFloatX : parX * 0.65);
     const x0 = centerX - drawW * 0.5;
 
-    let y0 = height * 0.54 - drawH * 0.5 + parY * 0.35;
+    let y0 = height * 0.52 - drawH * 0.5 + parY * 0.35;
     if (isMobile) {
       const heroEl = document.querySelector('.hero');
       const ctaEl = document.querySelector('.hero__cta');
@@ -53,10 +54,10 @@ export function createThemisJustice(getWidth, getHeight) {
         const heroRect = heroEl.getBoundingClientRect();
         const ctaRect = ctaEl.getBoundingClientRect();
         const ctaTop = ctaRect.top - heroRect.top;
-        const desiredY0 = ctaTop - 18 - drawH * LANDMARKS.chin.v + autoFloatY;
-        y0 = Math.max(64, desiredY0);
+        const desiredY0 = ctaTop - 16 - drawH * LANDMARKS.chin.v + autoFloatY;
+        y0 = Math.max(52, desiredY0);
       } else {
-        y0 = 76 + autoFloatY;
+        y0 = 64 + autoFloatY;
       }
     }
 

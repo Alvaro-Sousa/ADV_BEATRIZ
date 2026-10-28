@@ -12,7 +12,8 @@
   <meta property="og:title" content="Beatriz Morais Fernandes | Advocacia">
   <meta property="og:description" content="Direito do Trabalho, Direito Previdenciário e Direito Civil. Atendimento online em todo o Brasil.">
   <meta property="og:image" content="/img/hero.webp">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg?v=2">
   <link rel="preload" href="/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/img/hero.webp" as="image" type="image/webp" imagesrcset="/img/hero-sm.webp 560w, /img/hero.webp 960w" imagesizes="(max-width: 900px) 80vw, 440px">
@@ -112,76 +113,55 @@
         <header class="section__head reveal">
           <p class="eyebrow">Áreas de atuação</p>
           <h2 id="areas-title">Onde posso te ajudar</h2>
-          <p class="section__sub">Selecione a área para ver mais detalhes e iniciar a conversa já com o assunto definido.</p>
+          <p class="section__sub">Conheça as áreas de atuação e inicie a conversa já com o seu assunto definido.</p>
         </header>
 
-        <div class="areas">
-          <article class="area reveal" data-area="trabalhista">
-            <h3>
-              <button class="acc__btn" aria-expanded="false" aria-controls="area-1">
-                <span class="area__num">01</span>
-                <span class="area__title">Direito do Trabalho</span>
-                <span class="acc__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div class="acc__panel" id="area-1" role="region">
-              <div class="acc__inner">
-                <p>Defesa de trabalhadores que tiveram seus direitos desrespeitados, em todas as fases da relação de trabalho.</p>
-                <ul>
-                  <li>Verbas rescisórias e FGTS não pagos</li>
-                  <li>Horas extras, adicionais e banco de horas</li>
-                  <li>Reconhecimento de vínculo empregatício</li>
-                  <li>Assédio moral e sexual no trabalho</li>
-                  <li>Acidente de trabalho e doenças ocupacionais</li>
-                </ul>
-                <a href="#contato" class="btn btn--small btn--wine" data-pick="trabalhista">Falar sobre este caso</a>
-              </div>
+        <div class="areas-grid">
+          <article class="area-card reveal" data-area="trabalhista">
+            <span class="area-card__num">01</span>
+            <h3 class="area-card__title">Direito do Trabalho</h3>
+            <p class="area-card__desc">Defesa de trabalhadores que tiveram seus direitos desrespeitados, em todas as fases da relação de trabalho.</p>
+            <ul class="area-card__tags">
+              <li>Verbas rescisórias e FGTS</li>
+              <li>Horas extras e adicionais</li>
+              <li>Reconhecimento de vínculo</li>
+              <li>Assédio moral e sexual</li>
+              <li>Acidente e doença ocupacional</li>
+            </ul>
+            <div class="area-card__action">
+              <a href="#contato" class="btn btn--small btn--gold" data-pick="trabalhista">Falar sobre este caso</a>
             </div>
           </article>
 
-          <article class="area reveal" data-area="previdenciario">
-            <h3>
-              <button class="acc__btn" aria-expanded="false" aria-controls="area-2">
-                <span class="area__num">02</span>
-                <span class="area__title">Direito Previdenciário</span>
-                <span class="acc__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div class="acc__panel" id="area-2" role="region">
-              <div class="acc__inner">
-                <p>Atuação junto ao INSS e na Justiça para garantir a concessão, o restabelecimento ou a revisão do benefício previdenciário a que você tem direito.</p>
-                <ul>
-                  <li>Aposentadorias (por idade, tempo de contribuição, especial e rural)</li>
-                  <li>Benefícios por incapacidade (auxílio-doença e aposentadoria por invalidez)</li>
-                  <li>BPC/LOAS para idosos e pessoas com deficiência</li>
-                  <li>Pensão por morte, auxílio-reclusão e salário-maternidade</li>
-                  <li>Recursos e ações contra benefícios negados ou cortados pelo INSS</li>
-                </ul>
-                <a href="#contato" class="btn btn--small btn--wine" data-pick="previdenciario">Falar sobre este caso</a>
-              </div>
+          <article class="area-card reveal" data-area="previdenciario">
+            <span class="area-card__num">02</span>
+            <h3 class="area-card__title">Direito Previdenciário</h3>
+            <p class="area-card__desc">Atuação junto ao INSS e na Justiça para garantir a concessão, o restabelecimento ou a revisão do benefício previdenciário.</p>
+            <ul class="area-card__tags">
+              <li>Aposentadorias em geral</li>
+              <li>Benefícios por incapacidade</li>
+              <li>BPC/LOAS idoso e PcD</li>
+              <li>Pensão e salário-maternidade</li>
+              <li>Benefícios negados no INSS</li>
+            </ul>
+            <div class="area-card__action">
+              <a href="#contato" class="btn btn--small btn--gold" data-pick="previdenciario">Falar sobre este caso</a>
             </div>
           </article>
 
-          <article class="area reveal" data-area="civil">
-            <h3>
-              <button class="acc__btn" aria-expanded="false" aria-controls="area-3">
-                <span class="area__num">03</span>
-                <span class="area__title">Direito Civil</span>
-                <span class="acc__icon" aria-hidden="true"></span>
-              </button>
-            </h3>
-            <div class="acc__panel" id="area-3" role="region">
-              <div class="acc__inner">
-                <p>Orientação e atuação em conflitos do dia a dia, com foco em soluções seguras e, sempre que possível, ágeis.</p>
-                <ul>
-                  <li>Contratos, cobranças e inadimplência</li>
-                  <li>Indenizações por danos morais e materiais</li>
-                  <li>Direito do consumidor</li>
-                  <li>Família: divórcio, pensão e guarda</li>
-                  <li>Herança e inventário</li>
-                </ul>
-                <a href="#contato" class="btn btn--small btn--wine" data-pick="civil">Falar sobre este caso</a>
-              </div>
+          <article class="area-card reveal" data-area="civil">
+            <span class="area-card__num">03</span>
+            <h3 class="area-card__title">Direito Civil</h3>
+            <p class="area-card__desc">Orientação e atuação em conflitos do dia a dia, com foco em soluções seguras e, sempre que possível, ágeis.</p>
+            <ul class="area-card__tags">
+              <li>Contratos e cobranças</li>
+              <li>Danos morais e materiais</li>
+              <li>Direito do consumidor</li>
+              <li>Família: divórcio e guarda</li>
+              <li>Herança e inventário</li>
+            </ul>
+            <div class="area-card__action">
+              <a href="#contato" class="btn btn--small btn--gold" data-pick="civil">Falar sobre este caso</a>
             </div>
           </article>
         </div>

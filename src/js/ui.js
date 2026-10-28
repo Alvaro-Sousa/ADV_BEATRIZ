@@ -86,3 +86,27 @@ export function initMap() {
     mount();
   }
 }
+
+export function initCardEffects() {
+  const cards = document.querySelectorAll('.area-card');
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    // Modo compatibilidade / mobile: toque na tela ativa o efeito de pop-up
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      const willActivate = !card.classList.contains('is-active');
+      cards.forEach((c) => c.classList.remove('is-active'));
+      if (willActivate) {
+        card.classList.add('is-active');
+      }
+    });
+  });
+
+  // Tocar fora fecha o pop-up ativo no mobile
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.area-card')) {
+      cards.forEach((c) => c.classList.remove('is-active'));
+    }
+  });
+}
